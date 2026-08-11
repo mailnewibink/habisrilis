@@ -1,0 +1,6 @@
+{
+  "name": "HabisRilis.id",
+  "description": "A platform for musicians to create a professional Release Page for each release.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

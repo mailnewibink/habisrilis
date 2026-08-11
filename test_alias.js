@@ -1,0 +1,16 @@
+import { createClient } from '@supabase/supabase-js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const supabase = createClient(process.env.VITE_SUPABASE_URL, process.env.VITE_SUPABASE_ANON_KEY);
+
+async function run() {
+  const { data, error } = await supabase
+    .from('releases')
+    .select('id, title, slug, artist:artists(displayName:display_name, username), status')
+    .limit(1);
+    
+  console.log("Error:", error);
+  console.log("Data:", data);
+}
+run();
